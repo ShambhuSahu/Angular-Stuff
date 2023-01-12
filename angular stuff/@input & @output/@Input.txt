@@ -1,0 +1,36 @@
+@Input & @Output decorator
+:--- input and output decorator is use for transfer the from one component to another component.
+
+
+@Input : -- when data is send from parent to child then using @input decorator.
+@Output :- when data is send from child to parent then using @Output decorator.
+
+---------------------------------------------------------------------------------------
+<app-parent>
+
+<app-child></app-child>
+
+</app-parent>
+
+-------------------------------------------------------------------------------------
+
+step1: parent.component.ts
+
+  Ename:string='shambhu';
+
+step2 : parent.componet.html
+<p>parent works!</p>
+<div>
+   Name: <input type="text">
+</div>
+
+
+<app-child [EmployeeName]="Ename"></app-child> 
+
+step3 : child.component.ts
+ @Input() EmployeeName!:string;
+
+step4 : child.component.html
+<p>child works!</p>
+
+<h3>{{EmployeeName}}</h3>

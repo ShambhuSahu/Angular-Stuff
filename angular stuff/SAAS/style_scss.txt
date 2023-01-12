@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+    html, body { height: 100%; }
+    body { margin: 0; font-family: Poppins; }
+
+  //varibles and functions  
+    @import 'variables';
+
+ //base & layout
+    @import 'base';
+  
+ //colors
+
+  
+ //components (button,card,navbar)
+
+  @import '/src/component/card'
+
+  //utilities (margin,padding,opacity)
+
+
+
+

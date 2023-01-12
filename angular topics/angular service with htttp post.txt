@@ -1,0 +1,58 @@
+______________________ How to create db.json and how to post data from our angular form to json server_________________
+
+*****Install JSON Server*****
+
+1 npm install -g json-server
+
+2 Create a db.json file with some data
+
+{
+  "users": [
+    { "id": 1, 
+     "title": "json-server", 
+      "author": "typicode" }
+  ],
+  
+
+
+*** Start JSON Server
+
+3 json-server --watch db.json
+
+Now if you go to http://localhost:3000/posts/1, you'll get
+
+{ "id": 1, "title": "json-server", "author": "typicode" }	 	
+
+
++++++++++++++ step 2 ++++++++++
+
+import httpClintModule from '@angular/common/http' in app.module.ts
+
+
++++++++++++step 3 ++++++++++++++++++++++
+
+make service folder in src folder and create api.service.ts
+
+ng g s api
+
+xport class ApiService {
+
+  constructor(private http:HttpClient) { }
+
+  url:string=" http://localhost:3000/users";
+
+  // getUsers()
+  // {
+  //   return this.http.get<Users[]>(this.url);
+  // }
+
+  addUser(data:any)
+  {
+   return this.http.post(this.url,data); 
+  }
+
+  getUsers()
+  {
+    return this.http.get(this.url); 
+  }
+}

@@ -1,0 +1,33 @@
+1 angular Navigation bar
+2 Tollbar with sidebar
+3 component intraction
+4 component designing/communication
+@input 
+@output
+5 Reactive forms with validator,rgix
+6 custom validator and custom class validator
+7 custom class css
+8 Arrays in module
+9 maintain library
+10 custom directives
+
+__________________________________________________________
+11 sibling component
+12 error handle genrics
+13 redirect
+14 browser back button
+15 emit method component communiation
+16 custom directives
+17 tree format in component
+18 resulable component
+19 template refernce
+20 viewchild in angular
+21 sessoin stroge
+22 appication storage
+23 shared service
+24 timein and timeoutin angular
+25 color picking
+26 RxJs
+_____________________________________________________
+
+

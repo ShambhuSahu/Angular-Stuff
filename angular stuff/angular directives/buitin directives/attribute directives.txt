@@ -1,0 +1,73 @@
+change apperance or behaviour of a particular element.
+
+[ngStyle]
+[ngClass]
+------------------------------------------------------------------------------------------
+
+[ngStyle]== with the help of ngStyle , I can use more styles in single tag compare to styles.
+         == with also use method in ngstyle
+
+app.component.hmtl
+
+   <div [ngStyle]="myStyles">This is first ngStyle</div>
+
+
+app.component.ts
+  
+  myStyles={
+    height:'20rem',
+    width:'30rem',
+    border:'1px solid red'
+  }
+
+
+with method==
+   <div [ngStyle]="myStyles" >This is first ngStyle</div>
+   <button (click)="addStyle()">click method</button>
+
+addStyle(){
+    this.myStyles['color']='white';
+    this.myStyles['border']='1px solid black'
+    this.myStyles['backgroundColor']='red'
+  }
+  
+---------------------------------------------------------------------
+
+[ngClass] ==I can add and remove multiple classes conditionaly.
+
++++++++++++++++ component.html +++++++++++++
+
+<div [ngClass]="myngClass"></div>
+<button (click)="ngClassEx()">change shape</button>
+
+
+++++++++++++++++ component.scss++++++++++++++++++
+.box{
+        height: 200px;
+        width: 300px;
+        background-color:red;
+}
+
+.border{
+    border: 2px solid black;
+}
+
+.circle{
+    border-radius: 50%;
+}
+
++++++++++++++component.ts++++++++++++++++++++++++++
+
+ myngClass ={
+    box:true,
+    border:false,
+    circle:false
+
+  }
+
+  ngClassEx()
+  {
+    this.myngClass.border=!this.myngClass.border;
+    this.myngClass.circle=!this.myngClass.circle;
+
+  }

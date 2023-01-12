@@ -1,0 +1,14 @@
+hikari
+tomcat threads
+reactive programing
+http 1. resttemplate
+http 2.  grpc 
+
+T1 spring resttemplate restempalte
+T2 
+
+entity graph
+fetch
+
+
+

@@ -1,0 +1,19 @@
+
+// theme colors
+
+$white:white;
+$blue:blue;
+$red:red;
+$green:green;
+$black:black;
+
+
+
+$primary:#1919e6;
+$secondary:#e6e619;
+
+$colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+
+)

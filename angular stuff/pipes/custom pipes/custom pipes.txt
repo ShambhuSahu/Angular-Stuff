@@ -1,0 +1,32 @@
+custom pipes: with the help of custom pipes , can be transform the data with custom logic.
+
+
+how to create custom pipe.
+
+ng g pipe heighlight.
+
+
+heighlight.pipes.ts====
+
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'heighlight'
+})
+export class HeighlightPipe implements PipeTransform {
+
+  transform(value:string,city:string): string {
+    return 'city name: ' +city;
+  }
+
+}
+
+
+
+
+app.component.html===
+
+
+<h2>pipes</h2>
+
+{{users.city |heighlight:users.city}}

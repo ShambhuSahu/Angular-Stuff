@@ -1,0 +1,9 @@
+componet.html
+
+
+{{data1}}
+
+
+component.ts
+
+data1="shambhu"

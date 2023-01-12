@@ -1,0 +1,18 @@
++++++++++++ two way data binding +++++++++++++++++++++
+
+two way data binding is use for bind the data bidirectionally, when I need bind the data from component.ts to component.html bidrectionlly.
+
+==== it will define [(ngmodule)]="data1">
+
+==== need ngmodule and forms Module in app.module.ts for two data binding.
+
+
+app.component.ts
+
+data1="";
+
+app.component.html
+
+Name: <input type="text" [(ngModel)="data1"]
+
+<div>{{data1}}</div>

@@ -1,0 +1,48 @@
+@output== when data send from child to parent then I will use @outout decorator.
+
+child cmponent:---------------
+
+app.component.ts
+//this is output decorator
+  childData:string=" ";
+  @Output() childStringData:EventEmitter<string>=new EventEmitter();
+
+
+sendData()
+  {
+    this.childStringData.emit(this.childData);
+  }
+
+
+app.component.html
+<input type="text" [(ngModel)]="childData">
+<button class="btn btn-primary" (click)="sendData()">send data to parent</button>
+
+
+===========================================================================================================
+
+parent component:---------------
+
+parent.component.ts
+	
+  childData:string=" ";
+
+ receiveData(event:string){
+    console.log(event);
+    this.childData=event;
+
+  }
+}
+
+parent.component.html
+
+<p>parent works!</p>
+<div>
+
+   <h3>{{childData}}</h3>
+</div>
+
+
+<mat-divider style="margin:10px"></mat-divider>
+
+<app-child (childStringData)="receiveData($event)" ></app-child>

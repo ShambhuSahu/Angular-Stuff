@@ -1,0 +1,28 @@
+attribute binding is binded from component.ts to component.html.
+
+it will declare of [] bracket.
+
+app.component.html
+
+<img alt="item" [attr.src]="itemImageUrl">
+
+<!-- Bind button disabled state to `isUnchanged` property -->
+<button type="button" [disabled]="isUnchanged">Disabled Button</button>
+
+<app-item-detail [attr.childItem]="parentItem"></app-item-detail>
+
+
+
+
+app.component.ts
+
+itemImageUrl='../../assets/myimage.jpg'
+
+isUnchanged = true;
+
+
+
+++++++++++++++ vip ++++++++++++++++++
+what is the diffrence b/w property binding and attribute binding
+
+--both are use for same senario, but sometime some property is not supporting i.e case will use attribute binding

@@ -1,0 +1,14 @@
+______________ Today Task ________________________
+
+1) custom directive
+
+
+a- custom atrribute directive  
+  set background---done
+
+2) how to use global css like color as a variable
+ SAAS-----------
+ a)using color: done
+ b)using 
+
+3)

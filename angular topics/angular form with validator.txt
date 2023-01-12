@@ -1,0 +1,113 @@
+______________ Angular Form with validator_______________________________________________
+
+. How many types of way to create form in angular?
+
+Ans: Their are two ways to create form in angular.
+
+1 Template driven form
+2 Reactive form
+
+______________Reactive Form__________________________
+
+.with the help of reactive form we can create more complex and more functionality in anguar form.
+
+1 step===========================================================
+
+we will import reactive form module and forms module from angular forms in app.module.ts
+
+2 step============================================================
+
+we will create form in component1.html
+
+<mat-card>
+  <form [formGroup]="loginForm">
+  <p>
+    <mat-form-field>
+      <input matInput placeholder="enter your first name" formControlName="firstName">
+      <mat-label>enter your first name</mat-label>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="standard">
+      <mat-label>enter your last name</mat-label>
+      <input matInput placeholder="enter your last name" formControlName="lastName">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>enter your email id</mat-label>
+      <input matInput placeholder="enter your email id" formControlName="email">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+  <p>
+    <mat-form-field appearance="outline">
+      <mat-label>enter your phone number</mat-label>
+      <input matInput placeholder="enter your phone number" formControlName="phoneNumber">
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </p>
+
+  <button mat-raised-button color="primary" (click)="addclick()" [disabled]="!loginForm.valid">click here</button>
+  </form>
+</mat-card>
+
+
+
+3 step==========================================================================================================================
+
+component1.ts
+
+export class AngularformComponent implements OnInit {
+
+loginForm!: FormGroup;
+
+constructor(private formBuilder:FormBuilder) { }
+
+  ngOnInit(): void {
+
+/*    this.loginForm=new FormGroup({
+      'firstName':new FormControl(),
+      'lastName':new FormControl(),
+      'email':new FormControl(),
+      'phoneNumber':new FormControl(),
+
+    })
+    */
+
+    this.loginForm=this.formBuilder.group({
+      'firstName':new FormControl('',
+      [Validators.required,
+        Validators.minLength(5),
+        Validators.maxLength(10)
+      ]),
+      'lastName':new FormControl('',
+      [
+        Validators.required,
+        Validators.maxLength(10),
+      ]),
+      'email':new FormControl('',
+      [
+        Validators.required,
+        Validators.email,
+      ]
+
+      ),
+      'phoneNumber':new FormControl('',[
+        Validators.required,
+        Validators.minLength(10),
+        Validators.maxLength(10)
+       
+      ]),
+
+    })
+    
+  }
+
+
+addclick()
+  {
+         console.log(this.loginForm.value);
+  }

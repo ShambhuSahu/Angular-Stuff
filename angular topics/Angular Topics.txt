@@ -1,0 +1,49 @@
+1 angular architecture-----boot process in angular----how to works
+basics commands
+2 angular material----- how its works
+3 folder structure in angular
+4 what is requirement of install angular and how to update
+5 app architecture in angular
+6 what is modulews and how its works
+7 what is componant and how its works
+8 componant lifecycle hooks
+total 7
+need 4 ngOnit,ngOnchangs,ngdestory,ng
+9 componant communication
+parent to child
+child to parent
+with services
+10 temlate in angular
+11 what is directives , how many types and how its works
+12 what is data bindig
+ one way binding
+porerty binding
+attribute binding
+ two way binding
+13 pipes and its types
+14 interpolation
+15 router
+router outlet
+multiple router outlet
+router stargery
+routrt parent nd 
+configure componant routes
+parametrize route
+router link
+redirect route
+query params
+wilcard route
+16 route guards
+17 lazing loading
+18 angular forms
+temlate dirven form
+reactive form
+19 reactive forms with all vaidation
+20 services
+http client module
+http post
+http put
+http delete
+http get
+21 Rxjx Observable and Observar
+

@@ -1,0 +1,11 @@
+mat short descending ====custom shorting
+custom diective
+resolver---key
+property binding
+event binding
+view child communication
+sibling communication
+template variable
+custom directives
+
+

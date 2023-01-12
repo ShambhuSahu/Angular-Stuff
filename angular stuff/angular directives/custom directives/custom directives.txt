@@ -1,0 +1,79 @@
+Highlighter
+dropdown
+
+
+------- which diective which is use for make own directives.
+
+ng g directive customStyle
+
+++++++++++++++++  custom-style.directive.ts
+
+import { Directive, ElementRef, OnInit } from '@angular/core';
+
+
+@Directive({
+  selector: '[appCustomStyle]'
+})
+export class CustomStyleDirective  implements OnInit   {
+
+  constructor(private el:ElementRef) { 
+
+  }
+
+  ngOnInit(){
+    
+    // this.el.nativeElement.style.color="green";
+    this.el.nativeElement.style.display="none";
+  }
+}
+
+
++++++++++++++++++++ app.component.html
+
+<div>This is first div</div>
+<div>This is second div</div>
+
+<div appCustomStyle>This is third div</div>
+
+
+----------------------------------------------------- check-Num custom directives ------------------------------------------------------------------------------------
+
+1 first create/generate directives
+2 import ElementRef in constructor
+
+@HostListner : host listner which is use for listen to all the elements like mouse out, on focus, key up, key down, key press 
+
+app.componet.ts
+
+import { Directive, ElementRef, HostListener, Input, OnInit } from '@angular/core';
+
+@Directive({
+  selector: '[CheckNum]'
+})
+export class CheckNumDirective implements OnInit {
+
+  @Input() defaultValue:any;
+
+  constructor(private el: ElementRef) { }
+
+  ngOnInit() {
+    this.el.nativeElement.value=this.defaultValue;
+  }
+
+  @HostListener('keyup') onkeyup() {
+    if (this.el.nativeElement.value < 0 || this.el.nativeElement.value > 5) {
+      this.el.nativeElement.style.backgroundColor = "red";
+    }
+    else {
+      this.el.nativeElement.style.backgroundColor = "green";
+    }
+  }
+}
+
+
+
+
+app.component.html+++++++++++++++++
+
+  Email:<input type="text" CheckNum [defaultValue]='number'>
+
